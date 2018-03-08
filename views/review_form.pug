@@ -51,7 +51,7 @@ block content
             span#star4.fa.fa-star
           a(onclick='setStars(5)')
             span#star5.fa.fa-star   
-          input#stars.form-control(type='text', name='stars', value=(review === undefined ? 0 : review.stars), style=("display:none")) 
+          input#stars.form-control(type='text', name='stars', value=(review === undefined ? '' : review.stars), style=("display:none")) 
         if review
           script.
             displayStars(#{review.stars})       
