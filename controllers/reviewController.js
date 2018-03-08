@@ -15,7 +15,8 @@ exports.review_form_get = function (req, res, next) {
 exports.review_form_post = [
     body('name', 'Debes ingresar tu nombre.').isLength({min:1}).trim(),
     body('chef', 'Debes ingresar quien fue tu chef.').isLength({min:1}).trim(),
-    body('dish', 'Debes ingresar de que plato haces la reseña.').isLength({min:1}).trim(),
+    body('dish', ' Debes ingresar de que plato haces la reseña.').isLength({min:1}).trim(),
+    body('stars', ' Debes ingresar el puntaje.').isInt({ gt: 0 }),
     body('review_text', 'Debes ingresar algún texto en tu reseña.').isLength({min:1}).trim(),
 
     sanitizeBody('*').trim().escape(),
